@@ -15,7 +15,7 @@ docs:
   - title: "대목차1"
     children:
       - title: "대목차"
-       url: /categories/
+        url: /categories/
       - title: "Tag"
         url: /tags/
 

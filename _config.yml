@@ -79,8 +79,7 @@ naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
-sidebar:
-  nav: "docs"
+
   
 # Social Sharing
 twitter:
@@ -293,3 +292,5 @@ defaults:
       comments: # true
       share: true
       related: true
+      sidebar:
+        nav: "docs"

@@ -106,13 +106,13 @@ analytics:
 author:
   name             : "박재석/JEDO(제도)"
   avatar           : "/assets/images/profile.png"
-  bio              : "안녕하세요, 개발을 사랑하는 박재석이라고 합니다. 주로 웹 개발과 데이터 과학 분야에 관심이 많습니다. GitHub를 통해 오픈 소스 프로젝트에 기여하고 있으며, Python과 JavaScript를 주로 사용합니다. 개발 외적으로는 음악을 즐기고 여행을 좋아합니다. 연락은 언제든 환영합니다!"
+  bio              : "쟤도 하면 나도 할 수 있다."
   location         : "가천대역 3번 출구"
-  email            :
+  email            : "qkrwotjr0@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+       url: "mailto:qkrwotjr0@naver.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -124,7 +124,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+       url: "https://github.com/Jedo0224"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"

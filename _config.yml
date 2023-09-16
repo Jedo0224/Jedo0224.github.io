@@ -288,11 +288,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar:
-        nav: "docs"
       read_time: true
-      comments: # true
+      comments:  true
       share: true
       related: true
       sidebar:
-        nav: "docs"
+        nav: docs

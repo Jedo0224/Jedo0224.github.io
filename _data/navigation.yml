@@ -3,7 +3,7 @@ main:
 
 
 docs:
-   - title: "Spring Boot"
+  - title: "Spring Boot"
     url: /categories/Spring Boot/
   - title: "Algorithm"
     url: /categories/Algorithm/

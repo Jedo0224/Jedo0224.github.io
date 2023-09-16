@@ -279,8 +279,15 @@ compress_html:
     envs: development
 
 
+
 # Defaults
 defaults:
+  - scpoe: 
+      path: ""
+    values:
+      layout: home
+      sidebar:
+        nav: "main"
   # _posts
   - scope:
       path: ""
@@ -289,8 +296,16 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments:  true
-      share: true
-      related: true
+      comments: true 
+      sidebar:
+        nav: "main"
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      order: 1
       sidebar:
         nav: "main"

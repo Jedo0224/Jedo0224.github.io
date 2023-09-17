@@ -14,7 +14,7 @@
   &__inner-wrap {
     @include clearfix;
     padding: 1em;
-    margin-left: 5%;
+    margin-left: 7%;
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -58,7 +58,7 @@
 }
 
 .masthead__menu {
-  float: left;
+  float: right;
   margin-left: 0;
   margin-right: 0;
   width: 100%;

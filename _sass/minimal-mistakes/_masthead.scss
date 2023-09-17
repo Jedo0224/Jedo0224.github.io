@@ -49,6 +49,7 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
+  margin-left : 5%;
   // z-index: 20;
 }
 
@@ -59,13 +60,13 @@
 
 .masthead__menu {
   float: right;
-  margin-left: 0;
+  margin-left: 10%;
   margin-right: 0;
   width: 100%;
   clear: both;
 
   .site-nav {
-    margin-left: 0;
+    margin-left: 10%;
 
     @include breakpoint($small) {
       float: right;

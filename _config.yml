@@ -286,8 +286,8 @@ defaults:
       path: ""
     values:
       layout: home
-      sidebar:
-        nav: "docs"
+      sidebar_main: true
+      
   # _posts
   - scope:
       path: ""
@@ -297,8 +297,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true 
-      sidebar:
-        nav: "docs"
+      sidebar_main: true
   # _pages
   - scope:
       path: "_pages"
@@ -307,5 +306,4 @@ defaults:
       layout: single
       author_profile: true
       order: 1
-      sidebar:
-        nav: "docs"
+      sidebar_main: true

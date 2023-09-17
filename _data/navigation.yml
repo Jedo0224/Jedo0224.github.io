@@ -1,43 +1,33 @@
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  - title: "Sample Collections"
-    url: /collection-archive/
-  - title: "Sitemap"
-    url: /sitemap/
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
 
 docs:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  - title: "Sample Collections"
-    url: /collection-archive/
-  - title: "Sitemap"
-    url: /sitemap/
-  # - title: "Spring Boot"
-  #   url: /categories/Spring Boot/
-  # - title: "Algorithm"
-  #   url: /categories/Algorithm/
-  # - title: "Data Structure"
-  #   url: /categories/Data Structure/
-  # - title: "HTTP"
-  #   url: /categories/HTTP/
-  # - title: "BOJ"
-  #   url: /categories/BOJ/
-  # - title: "Project"
-  #   url: /categories/Project/
-  # - title: "Web"
-  #   url: /categories/Web/
-  # - title: "Java"
-  #   url: /categories/Java
-  # - title: "MySQL"
-  #   url: /categories/MySQL/
-  # - title: "JPA"
-  #   url: /categories/JPA/
+  - title: "Spring Boot"
+    url: /categories/Spring Boot/
+  - title: "Algorithm"
+    url: /categories/Algorithm/
+  - title: "Data Structure"
+    url: /categories/Data Structure/
+  - title: "HTTP"
+    url: /categories/HTTP/
+  - title: "BOJ"
+    url: /categories/BOJ/
+  - title: "Project"
+    url: /categories/Project/
+  - title: "Web"
+    url: /categories/Web/
+  - title: "Java"
+    url: /categories/Java
+  - title: "MySQL"
+    url: /categories/MySQL/
+  - title: "JPA"
+    url: /categories/JPA/

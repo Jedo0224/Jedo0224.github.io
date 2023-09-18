@@ -10,7 +10,7 @@
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
-    padding-left: 30px;
+    padding-left: 4%;
   }
 
   @include breakpoint($x-large) {

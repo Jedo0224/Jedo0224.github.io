@@ -6,8 +6,8 @@
   @include clearfix;
   margin-left: 5%;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  //padding-left: 1em;
+  //padding-right: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -15,7 +15,7 @@
   animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
-    max-width: $max-width;
+    max-width: 85%;
   }
 }
 

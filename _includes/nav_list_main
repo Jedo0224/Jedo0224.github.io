@@ -11,7 +11,7 @@
       <span class="nav__sub-title">Backend</span>
       <ul>
         {% for category in site.categories %}
-          {% if category[0] == "Spring" or category[0] == "Kafka" %}
+          {% if category[0] == "Spring" %}
             <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
           {% endif %}
         {% endfor %}
@@ -21,7 +21,27 @@
       <span class="nav__sub-title">Computer Science</span>
       <ul>
         {% for category in site.categories %}
-          {% if category[0] == "Database" or category[0] == "Computer Architecture" or category[0] == "Network" or category[0] == "OS" or category[0] == "Java" %}
+          {% if category[0] == "Database" %}
+            <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
+          {% endif %}
+        {% endfor %}
+        {% for category in site.categories %}
+          {% if category[0] == "Computer Architecture" %}
+            <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
+          {% endif %}
+        {% endfor %}
+        {% for category in site.categories %}
+          {% if category[0] == "Network" %}
+            <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
+          {% endif %}
+        {% endfor %}
+        {% for category in site.categories %}
+          {% if category[0] == "OS" %}
+            <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
+          {% endif %}
+        {% endfor %}
+        {% for category in site.categories %}
+          {% if category[0] == "Java" %}
             <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
           {% endif %}
         {% endfor %}
@@ -31,7 +51,12 @@
       <span class="nav__sub-title">Coding Test</span>
       <ul>
         {% for category in site.categories %}
-          {% if category[0] == "Algorithm" or category[0] == "Problem Solving" %}
+          {% if category[0] == "Algorithm" %}
+            <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
+          {% endif %}
+        {% endfor %}
+        {% for category in site.categories %}
+          {% if category[0] == "Problem Solving" %}
             <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
           {% endif %}
         {% endfor %}

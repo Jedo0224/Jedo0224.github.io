@@ -1,6 +1,7 @@
 ---
 title:  "왜안되는지 화가나 나뉴ㅠㅠ :)"
 excerpt: "첫번째 포스팅"
+![image](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/e95de439-a95b-4514-bb63-429107617f19)
 
 categories:
   - Database

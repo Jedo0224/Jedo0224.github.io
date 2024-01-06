@@ -505,15 +505,15 @@
 
 .toc {
   font-family: $sans-serif-narrow;
-  color: #87cefa;
-  background-color: $background-color;
+  color: $gray;
+  background-color: #87cefa;;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 
   .nav__title {
-    color: #87cefa;
+    color: #fff;
     background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -530,7 +530,6 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: 12px;
 
 
   @include breakpoint($large) {
@@ -539,7 +538,7 @@
 
   a {
     display: block;
-    font-size: 12px;
+    font-size: 11px;
     padding: 0.25rem 0.75rem;
     color: $muted-text-color;
     font-weight: bold;

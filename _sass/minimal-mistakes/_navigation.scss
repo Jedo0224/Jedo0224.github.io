@@ -514,7 +514,7 @@
 
   .nav__title {
     color: #fff;
-    background: #87cefa;
+    background: mix(#87cefa, $primary-color, 80%);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }

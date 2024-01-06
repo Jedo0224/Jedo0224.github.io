@@ -15,7 +15,6 @@ last_modified_at: 2024-01-06
 ---
 
 
-# 객체 지향 설계와 스프링
 
 ## Spring
 

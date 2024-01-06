@@ -14,22 +14,6 @@ date: 2024-01-05
 last_modified_at: 2024-01-06
 ---
 
----
-title:  "객체 지향 설계와 스프링"
-excerpt: "스프링 부트 핵심 원리 - 기본편"
-
-categories:
-  - Spring
-tags:
-  - [Spring, Java, OOP]
-
-toc: true
-toc_sticky: true
- 
-date: 2024-01-06
-last_modified_at: 2024-01-06
----
-
 
 # 객체 지향 설계와 스프링
 

@@ -530,6 +530,7 @@
   padding: 0;
   width: 100%;
   list-style: none;
+  font-size: 12px;
 
 
   @include breakpoint($large) {
@@ -538,7 +539,7 @@
 
   a {
     display: block;
-    font-size: 11px;
+    font-size: 12px;
     padding: 0.25rem 0.75rem;
     color: $muted-text-color;
     font-weight: bold;

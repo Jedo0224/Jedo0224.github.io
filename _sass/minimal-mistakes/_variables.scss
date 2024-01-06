@@ -8,15 +8,17 @@
 
 $doc-font-size: 16 !default;
 
+$customFontStyle : 'WantedSansVariable';
+
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: 'Nanum Gothic', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue',
+$serif: $customFontStyle, Georgia, Times, serif !default;
+$sans-serif: $customFontStyle,'Nanum Gothic', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue',
   'Lucida Grande', Arial, sans-serif !default;
-$monospace: 'Nanum Gothic', Monaco, Consolas, 'Lucida Console', monospace !default;
+$monospace: $customFontStyle, 'Nanum Gothic', Monaco, Consolas, 'Lucida Console', monospace !default;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif  !default;

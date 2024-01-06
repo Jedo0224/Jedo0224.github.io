@@ -6,11 +6,11 @@
    Typography
    ========================================================================== */
 
-$doc-font-size: 16 !default;
+$doc-font-size: 14 !default;
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
-$indent-var: 1.3em !default;
+$indent-var: 1.2em !default;
 
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
@@ -48,11 +48,11 @@ $type-size-7: 0.6875em !default; // ~11px
 $type-size-8: 0.625em !default; // ~10px
 
 /* headline scale */
-$h-size-1: 1.563em !default; // ~25.008px
-$h-size-2: 1.25em !default; // ~20px
-$h-size-3: 1.125em !default; // ~18px
-$h-size-4: 1.0625em !default; // ~17px
-$h-size-5: 1.03125em !default; // ~16.5px
+$h-size-1: 1.663em !default; // ~25.008px
+$h-size-2: 1.35em !default; // ~20px
+$h-size-3: 1.225em !default; // ~18px
+$h-size-4: 1.1625em !default; // ~17px
+$h-size-5: 1.13125em !default; // ~16.5px
 $h-size-6: 1em !default; // ~16px
 
 /*

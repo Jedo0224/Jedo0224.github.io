@@ -514,7 +514,6 @@
 
   .nav__title {
     color: #fff;
-    font-size: 11px;
     background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -531,7 +530,7 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: 11px;
+
 
   @include breakpoint($large) {
     font-size: $type-size-7;
@@ -539,6 +538,7 @@
 
   a {
     display: block;
+    font-size: 11px;
     padding: 0.25rem 0.75rem;
     color: $muted-text-color;
     font-weight: bold;

@@ -509,8 +509,8 @@
   background-color: $background-color;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  -webkit-box-shadow: #87cefa;
-  box-shadow: #87cefa;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
 
   .nav__title {
     color: #fff;

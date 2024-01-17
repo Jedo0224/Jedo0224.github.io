@@ -125,7 +125,8 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 - 1 int, 1 string, 1,000,000 longs— 1 million unique keys
 - 1,000,000 ints, 1 string, 1 long — 1 million unique keys
 
-![Untitled](%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A1%E1%86%B8%20%E1%84%8F%E1%85%B5%20%E1%84%8F%E1%85%B5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%209fa8fbd79438461d8ab3938d5cde9ae9/Untitled.png)
+![Untitled](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/112a587a-fafe-40fe-83a1-c64885e562ba)
+
 
 - heap size가 nested Maps에서 크게 증가함.
     - nested Maps
@@ -145,18 +146,22 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 
 ### Creation Duration & Creation Memory Allocation (MB)
 
-![Untitled](%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A1%E1%86%B8%20%E1%84%8F%E1%85%B5%20%E1%84%8F%E1%85%B5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%209fa8fbd79438461d8ab3938d5cde9ae9/Untitled%201.png)
+![Untitled 1](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/2323fd1c-a3d0-4205-ad6e-2ad2b5c59004)
 
-![Untitled](%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A1%E1%86%B8%20%E1%84%8F%E1%85%B5%20%E1%84%8F%E1%85%B5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%209fa8fbd79438461d8ab3938d5cde9ae9/Untitled%202.png)
+![Untitled 2](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/d8726cfc-f114-4fbf-9b2a-cde9298a785a)
+
+
 
 - nested Maps 메모리 할당이 크지만 CPU 시간에서 다른 맵보다 성능이 뛰어남.
 - 문자열 결합은 nested Maps 보다 약간 느리고 Composite Key보다 더 많은 메모리 할당이 필요.
 
 ## Lookup Duration & Lookup Allocation
 
-![Untitled](%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A1%E1%86%B8%20%E1%84%8F%E1%85%B5%20%E1%84%8F%E1%85%B5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%209fa8fbd79438461d8ab3938d5cde9ae9/Untitled%203.png)
+![Untitled 3](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/e198541a-183d-48ef-8680-62d0e4e068f1)
 
-![Untitled](%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A1%E1%86%B8%20%E1%84%8F%E1%85%B5%20%E1%84%8F%E1%85%B5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%87%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8%E1%84%8B%E1%85%A6%20%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%209fa8fbd79438461d8ab3938d5cde9ae9/Untitled%204.png)
+
+![Untitled 4](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/42a0f759-ea21-4041-93be-e182fcd1bc80)
+
 
 - 문자열 결합 기반의 키조회가 가장 느림을 알 수 있으며 **nested Maps에서는 조회를 수행하기 위한 추가적 메모리 할당이 필요하지 않다.**
     

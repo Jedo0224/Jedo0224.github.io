@@ -24,9 +24,9 @@ last_modified_at: 2024-01-17
 - 복합키를 사용하는 경우
     - map 또는 Cache를 조회할 때 “키”를 정의하기 위해 데이터 조합이 필요한 경우이다. (사용자 이름에 따란 고유한 값을 저장하는 경우 등등,,)
 
-
-
-
+<br/>
+<br/>
+<br/>
 ## 문자열 결합
 
 ### 문제점
@@ -64,7 +64,7 @@ extensionName 키가 선택적이다. 이 경우 생길 수 있는 문제점은 
 
 
 
-
+<br/><br/><br/>
 ## Use Nested Maps/Caches
 
 Maps of Maps of Maps와 같은 복잡한 자료구조를 이용하는 방법.
@@ -85,7 +85,7 @@ Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP
 ### 따라서 문자열 결합과 ****Nested Maps/Caches 모두 갖고 있는 키의 고유성에 따라 공간 효율성이 떨어진다고 볼 수 있다.****
 
 
-
+<br/><br/><br/>
 
 ## Create a Composite Key Object
 
@@ -127,7 +127,7 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 1. 객체 생성 오버헤드가 발생할 수 있다. 
 
 
-
+<br/><br/><br/>
 
 ## 성능 비교
 
@@ -199,7 +199,7 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
     주어진 부분을 각 nested map의 키로 재사용하기 때문이다.
     
 
-
+<br/><br/><br/>
 ### reference 
 https://hackernoon.com/composite-keys-a-guide-on-how-to-handle-them
 

@@ -28,7 +28,7 @@ last_modified_at: 2024-01-17
 <br/>
 <br/>
 ## 문자열 결합
-
+<br/>
 ### 문제점
 
 ```java
@@ -50,7 +50,7 @@ public String getMapKey(Integer groupId, Integer accessType) {
 }
 ```
 
-1. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)/되면 안된다.
+2. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)/되면 안된다.
     groupId = 1 and accessType = 23, groupId = 12 and accessType = 3의 각 문자열을 그냥 합쳐져 123이 되어 overlap되지 않도록 “,”를 추가하는 등의 작업을 추가해야한다.
 
 ```java
@@ -73,15 +73,15 @@ Maps of Maps of Maps와 같은 복잡한 자료구조를 이용하는 방법.
 Map<Integer, Map<String, String>> groupAndLocaleMap = new HashMap<>();
 groupAndLocaleMap.computeIfAbsent(userId, k -> new HashMap()).put(userLocale, mapValue);
 ```
-
+<br/>
 ### 장점
 
-Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP과 상호작용 할 경우 새 메모리를 할당할 필요가 없다. 
-
+- Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP과 상호작용 할 경우 새 메모리를 할당할 필요가 없다. 
+<br/>
 ### 문제점
 
 1. 3개 이상의 데이터를 처리하기 시작하면 코드 가독성이 낮아지고 및 맵 초기화가 어려워진다. 또한 각 레벨에서는 null point exception을 피하기 위한 검사가 필요하다. 
-
+<br/>
 ### 따라서 문자열 결합과 ****Nested Maps/Caches 모두 갖고 있는 키의 고유성에 따라 공간 효율성이 떨어진다고 볼 수 있다.****
 
 
@@ -116,7 +116,7 @@ private class MapKey {
 
 ### 장점
 
-각 키를 구성하는 부분을 문자열로 다시 할당할 필요가 없이 객체 키에만 새 메모리만 필요하기에 문자열 보다 메모리 효율에 이점이 있다. 
+- 각 키를 구성하는 부분을 문자열로 다시 할당할 필요가 없이 객체 키에만 새 메모리만 필요하기에 문자열 보다 메모리 효율에 이점이 있다. 
 
 key equality and hashcode implementations에 대한 커스터마이징이 가능하다. (ex . 문자열에서 대문자 무시, 배열이나 컬랙션을 key값으로 사용하는 등)
 
@@ -130,7 +130,7 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 <br/><br/><br/>
 
 ## 성능 비교
-
+<br/>
 ### Retained Map Size
 
 - 100 ints, 100 strings, 100 longs — 1 million unique keys  (각 한개의 키에  100 ints, 100 strings, 100 longs 이 들어가있음)
@@ -155,7 +155,7 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
             1,000,000 x 1 x 1= 1,000,000 , 여기에 최상위 맵 1,000,000개를 더하여 2,000,000이 만들어진다.
             
     
-
+<br/>
 ### Creation Duration & Creation Memory Allocation (MB)
 
 ![Untitled 1](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/2323fd1c-a3d0-4205-ad6e-2ad2b5c59004)
@@ -169,8 +169,8 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 
 
 
-
-## Lookup Duration & Lookup Allocation
+<br/>
+### Lookup Duration & Lookup Allocation
 
 ![Untitled 3](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/e198541a-183d-48ef-8680-62d0e4e068f1)
 
@@ -199,7 +199,7 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
     주어진 부분을 각 nested map의 키로 재사용하기 때문이다.
     
 
-<br/><br/><br/>
+<br/><br/>
 
 
 ## 결론

@@ -24,6 +24,9 @@ last_modified_at: 2024-01-17
 - 복합키를 사용하는 경우
     - map 또는 Cache를 조회할 때 “키”를 정의하기 위해 데이터 조합이 필요한 경우이다. (사용자 이름에 따란 고유한 값을 저장하는 경우 등등,,)
 
+
+
+
 ## 문자열 결합
 
 ### 문제점
@@ -37,7 +40,7 @@ private String getMapKey(Long userId, String userLocale) {
 ```
 
 1. 이러한 문자열의 할당은 당신이 얼마나 많은 키를 갖고 있는지에 크게 의존할 것이다. 
-    1. 예를 들면 map에 자주 접근한다면 많은 수의 할당이 이루어지고 garbage collected이 필요해 질 수 있다.
+    예를 들면 map에 자주 접근한다면 많은 수의 할당이 이루어지고 garbage collected이 필요해 질 수 있다.
     
 
 ```java
@@ -48,7 +51,7 @@ public String getMapKey(Integer groupId, Integer accessType) {
 ```
 
 1. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)/되면 안된다.
-    1.  groupId = 1 and accessType = 23, groupId = 12 and accessType = 3의 각 문자열을 그냥 합쳐져 123이 되어 overlap되지 않도록 “,”를 추가하는 등의 작업을 추가해야한다.
+    groupId = 1 and accessType = 23, groupId = 12 and accessType = 3의 각 문자열을 그냥 합쳐져 123이 되어 overlap되지 않도록 “,”를 추가하는 등의 작업을 추가해야한다.
 
 ```java
 //3
@@ -59,7 +62,10 @@ public String getMapKey(String userProvidedString, String extensionName) {
 
 extensionName 키가 선택적이다. 이 경우 생길 수 있는 문제점은 예를 들어 **`userProvidedString`**이 "data.txt"이고 **`extensionName`**이 **`null`**이라면, 이 함수는 "data.txt"라는 키를 반환한다. 하지만 **`userProvidedString`**이 "data"이고 **`extensionName`**이 "txt"라면, 함수는 "data.txt"라는 동일한 키를 반환한다. 이런 상황에서, 두 번째 경우에서 사용자가 실제로 "data.txt"라는 이름의 캐시 데이터에 접근할 수 있게 되어 보안 및 데이터 무결성에 문제가 될 수 있다. 
 
-## ****Use Nested Maps/Caches****
+
+
+
+## Use Nested Maps/Caches
 
 Maps of Maps of Maps와 같은 복잡한 자료구조를 이용하는 방법.
 
@@ -78,7 +84,10 @@ Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP
 
 ### 따라서 문자열 결합과 ****Nested Maps/Caches 모두 갖고 있는 키의 고유성에 따라 공간 효율성이 떨어진다고 볼 수 있다.****
 
-## ****Create a Composite Key Object****
+
+
+
+## Create a Composite Key Object
 
 ```java
 private class MapKey {  
@@ -116,6 +125,9 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 ### 단점
 
 1. 객체 생성 오버헤드가 발생할 수 있다. 
+
+
+
 
 ## 성능 비교
 
@@ -155,6 +167,9 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 - nested Maps 메모리 할당이 크지만 CPU 시간에서 다른 맵보다 성능이 뛰어남.
 - 문자열 결합은 nested Maps 보다 약간 느리고 Composite Key보다 더 많은 메모리 할당이 필요.
 
+
+
+
 ## Lookup Duration & Lookup Allocation
 
 ![Untitled 3](https://github.com/Jedo0224/Jedo0224.github.io/assets/90050514/e198541a-183d-48ef-8680-62d0e4e068f1)
@@ -183,6 +198,9 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
     
     주어진 부분을 각 nested map의 키로 재사용하기 때문이다.
     
+
+
+
 
 ## 결론
 

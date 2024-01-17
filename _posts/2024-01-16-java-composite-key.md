@@ -1,11 +1,11 @@
 ---
 title:  "복합 키: 키 처리 방법에 대한 가이드"
-excerpt: "복합 키: 키 처리 방법에 대한 가이드"
+excerpt: "[복합 키: 키 처리 방법에 대한 가이드](https://hackernoon.com/composite-keys-a-guide-on-how-to-handle-them)"
 
 categories:
   - Java
 tags:
-  - [Blog, jekyll, Github, Git]
+  - [Java]
 
 toc: true
 toc_sticky: true
@@ -200,7 +200,8 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
     
 
 
-
+### reference 
+https://hackernoon.com/composite-keys-a-guide-on-how-to-handle-them
 
 ## 결론
 

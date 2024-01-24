@@ -64,21 +64,7 @@ public String getMapKey(String userProvidedString, String extensionName) {
 
 
 
-<br/><br/><br/>
-## Use Nested Maps/Caches
-
-Maps of Maps of Maps와 같은 복잡한 자료구조를 이용하는 방법.
-
-```java
-Map<Integer, Map<String, String>> groupAndLocaleMap = new HashMap<>();
-groupAndLocaleMap.computeIfAbsent(userId, k -> new HashMap()).put(userLocale, mapValue);
-```
-<br/>
-### 장점
-
-- Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP과 상호작용 할 경우 새 메모리를 할당할 필요가 없다. 
-<br/>
-### 문제점
+<br/><br/>
 
 1. 3개 이상의 데이터를 처리하기 시작하면 코드 가독성이 낮아지고 및 맵 초기화가 어려워진다. 또한 각 레벨에서는 null point exception을 피하기 위한 검사가 필요하다. 
 <br/>
@@ -122,7 +108,7 @@ key equality and hashcode implementations에 대한 커스터마이징이 가능
 
 이해하기 쉽고 최소한의 코드를 요구하며 나중에 디버깅하기 쉽다. 
 
-### 문제
+### 단점
 
 1. 객체 생성 오버헤드가 발생할 수 있다. 
 

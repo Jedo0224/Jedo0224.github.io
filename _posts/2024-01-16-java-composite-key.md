@@ -37,8 +37,8 @@ private String getMapKey(Long userId, String userLocale) {
 
 ```
 <br/>
-1. 이러한 문자열의 할당은 당신이 얼마나 많은 키를 갖고 있는지에 크게 의존할 것이다. 
-    예를 들면 map에 자주 접근한다면 많은 수의 할당이 이루어지고 garbage collected이 필요해 질 수 있다.
+11. 이러한 문자열의 할당은 당신이 얼마나 많은 키를 갖고 있는지에 크게 의존할 것이다.   
+    예를 들면 map에 자주 접근한다면 많은 수의 할당이 이루어지고 garbage collected이 필요해 질 수 있다.  
     
 
 ```java
@@ -50,7 +50,7 @@ public String getMapKey(Integer groupId, Integer accessType) {
 
 
 <br/>
-2. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)되면 안된다.
+22. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)되면 안된다.  
     groupId = 1 and accessType = 23, groupId = 12 and accessType = 3의 각 문자열을 그냥 합쳐져 123이 되어 overlap되지 않도록 “,”를 추가하는 등의 작업을 추가해야한다.
 
 ```java
@@ -60,7 +60,7 @@ public String getMapKey(String userProvidedString, String extensionName) {
 }
 ```
 <br/>
-3. extensionName 키가 선택적이다. 이 경우 생길 수 있는 문제점은 예를 들어 **`userProvidedString`**이 "data.txt"이고 **`extensionName`**이 **`null`**이라면, 이 함수는 "data.txt"라는 키를 반환한다. 하지만 **`userProvidedString`**이 "data"이고 **`extensionName`**이 "txt"라면, 함수는 "data.txt"라는 동일한 키를 반환한다. 이런 상황에서, 두 번째 경우에서 사용자가 실제로 "data.txt"라는 이름의 캐시 데이터에 접근할 수 있게 되어 보안 및 데이터 무결성에 문제가 될 수 있다. 
+33. extensionName 키가 선택적이다. 이 경우 생길 수 있는 문제점은 예를 들어 **`userProvidedString`**이 "data.txt"이고 **`extensionName`**이 **`null`**이라면, 이 함수는 "data.txt"라는 키를 반환한다. 하지만 **`userProvidedString`**이 "data"이고 **`extensionName`**이 "txt"라면, 함수는 "data.txt"라는 동일한 키를 반환한다. 이런 상황에서, 두 번째 경우에서 사용자가 실제로 "data.txt"라는 이름의 캐시 데이터에 접근할 수 있게 되어 보안 및 데이터 무결성에 문제가 될 수 있다. 
 
 
 
@@ -81,9 +81,10 @@ groupAndLocaleMap.computeIfAbsent(userId, k -> new HashMap()).put(userLocale, ma
 <br/>
 ### 단점
 
-1. 3개 이상의 데이터를 처리하기 시작하면 코드 가독성이 낮아지고 및 맵 초기화가 어려워진다. 또한 각 레벨에서는 null point exception을 피하기 위한 검사가 필요하다. 
-<br/>
-### 따라서 문자열 결합과 ****Nested Maps/Caches 모두 갖고 있는 키의 고유성에 따라 공간 효율성이 떨어진다고 볼 수 있다.****
+1. 3개 이상의 데이터를 처리하기 시작하면 코드 가독성이 낮아지고 및 맵 초기화가 어려워진다. 또한 각 레벨에서는 null point exception을 피하기 위한 검사가 필요하다.  
+
+
+### 따라서 문자열 결합과 **Nested Maps/Caches 모두 갖고 있는 키의 고유성에 따라 공간 효율성이 떨어진다고 볼 수 있다.**
 
 
 <br/><br/><br/>
@@ -142,16 +143,16 @@ private class MapKey {
 
 
 - heap size가 nested Maps에서 크게 증가함.
-    - nested Maps
-        - 1번 시나리오
+    - nested Maps  
+        - 1번 시나리오  
             
             100 x 100 x 100 = 1,000,000개의 조합이 만들어진다. 여기에 최상위 맵 100개를 더하면 총 1,000,100개의 맵이 만들어진다.
             
-        - 2번 시나리오
+        - 2번 시나리오  
             
             1 x 1 x 1,000,000 = 1,000,000 , 여기에 최상위 맵 1개를 더하여 1,000,001이 만들어진다.
             
-        - 3번 시나리오
+        - 3번 시나리오  
             
             1,000,000 x 1 x 1= 1,000,000 , 여기에 최상위 맵 1,000,000개를 더하여 2,000,000이 만들어진다.
             
@@ -217,9 +218,12 @@ private class MapKey {
 
 ## 결론
 
-자체 테스트를 수행하여 서비스 성능에 알맞은 방식을 선택해야한다.  
-이 때 Composite key는 Nested maps가 사용 불가능할 때 매우 유용한 선택지가 될 수 있다.  
+자체 테스트를 수행하여 서비스 성능에 알맞은 방식을 선택해야한다. 
+
+이 때 Composite key는 Nested maps가 사용 불가능할 때 매우 유용한 선택지가 될 수 있다. 
+
 또한  Composite key와 Nested maps를 합쳐서 사용할 수 있는 방법이 있는데. 예를 들어 첫번째 또는 두 번째 수준에 Nested maps을 사용하고 그 이후 더 깊은 수준을 Composite key를 사용하여 단순화 시킬 수 있다.  
+
 Composite key를 통해 스토리지 및 조회 성능을 최적화 하는 동시에 빠른 조회를 위해 데이터를 분할 된 상태로 유지하고 코드 가독성 또한 높일 수 있다.
 
 <br/><br/>

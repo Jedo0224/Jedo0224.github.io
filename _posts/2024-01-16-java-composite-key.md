@@ -50,7 +50,7 @@ public String getMapKey(Integer groupId, Integer accessType) {
 }
 ```
 
-21. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)되면 안된다.
+2. 내가 생성한 복합키가 다른 키값에 spoofing(같은 사용자인 것처럼 위장되는 것)되면 안된다.
     groupId = 1 and accessType = 23, groupId = 12 and accessType = 3의 각 문자열을 그냥 합쳐져 123이 되어 overlap되지 않도록 “,”를 추가하는 등의 작업을 추가해야한다.
 
 ```java
@@ -78,7 +78,7 @@ groupAndLocaleMap.computeIfAbsent(userId, k -> new HashMap()).put(userLocale, ma
 
 - Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP과 상호작용 할 경우 새 메모리를 할당할 필요가 없다. 
 <br/>
-### 단점점
+### 단점
 
 1. 3개 이상의 데이터를 처리하기 시작하면 코드 가독성이 낮아지고 및 맵 초기화가 어려워진다. 또한 각 레벨에서는 null point exception을 피하기 위한 검사가 필요하다. 
 <br/>

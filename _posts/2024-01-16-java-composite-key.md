@@ -74,7 +74,8 @@ groupAndLocaleMap.computeIfAbsent(userId, k -> new HashMap()).put(userLocale, ma
 <br/>
 ### 장점
 
-- Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP과 상호작용 할 경우 새 메모리를 할당할 필요가 없다. 
+- Map으로 전달된 키 값이 이미 할당되어있기 때문에 내부의 MAP과 상호작용 할 경우 새 메모리를 할당할 필요가 없다.
+
 <br/>
 ### 단점
 

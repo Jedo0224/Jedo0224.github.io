@@ -117,9 +117,9 @@ private class MapKey {
 
 - 각 키를 구성하는 부분을 문자열로 다시 할당할 필요가 없이 객체 키에만 새 메모리만 필요하기에 문자열 보다 메모리 효율에 이점이 있다. 
 
-key equality and hashcode implementations에 대한 커스터마이징이 가능하다. (ex . 문자열에서 대문자 무시, 배열이나 컬랙션을 key값으로 사용하는 등)
+- key equality and hashcode implementations에 대한 커스터마이징이 가능하다. (ex . 문자열에서 대문자 무시, 배열이나 컬랙션을 key값으로 사용하는 등)
 
-이해하기 쉽고 최소한의 코드를 요구하며 나중에 디버깅하기 쉽다. 
+- 이해하기 쉽고 최소한의 코드를 요구하며 나중에 디버깅하기 쉽다. 
 
 ### 단점
 

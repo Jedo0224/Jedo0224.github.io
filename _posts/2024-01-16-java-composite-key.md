@@ -217,9 +217,9 @@ private class MapKey {
 
 ## 결론
 
-자체 테스트를 수행하여 서비스 성능에 알맞은 방식을 선택해야한다.
-이 때 Composite key는 Nested maps가 사용 불가능할 때 매우 유용한 선택지가 될 수 있다.
-또한  Composite key와 Nested maps를 합쳐서 사용할 수 있는 방법이 있는데. 예를 들어 첫번째 또는 두 번째 수준에 Nested maps을 사용하고 그 이후 더 깊은 수준을 Composite key를 사용하여 단순화 시킬 수 있다.
+자체 테스트를 수행하여 서비스 성능에 알맞은 방식을 선택해야한다.  
+이 때 Composite key는 Nested maps가 사용 불가능할 때 매우 유용한 선택지가 될 수 있다.  
+또한  Composite key와 Nested maps를 합쳐서 사용할 수 있는 방법이 있는데. 예를 들어 첫번째 또는 두 번째 수준에 Nested maps을 사용하고 그 이후 더 깊은 수준을 Composite key를 사용하여 단순화 시킬 수 있다.  
 Composite key를 통해 스토리지 및 조회 성능을 최적화 하는 동시에 빠른 조회를 위해 데이터를 분할 된 상태로 유지하고 코드 가독성 또한 높일 수 있다.
 
 <br/><br/>

@@ -126,7 +126,9 @@
 
   table,
   blockquote,
-  pre,
+  pre {
+    font-size : 14px;
+  },
   code,
   figure,
   li,
@@ -167,12 +169,15 @@
     page-break-after: auto;
     page-break-before: auto;
     page-break-inside: avoid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   pre {
     white-space: pre-wrap !important;
     word-wrap: break-word;
-    font-size : 14px;
+    
   }
 
   a[href^='http://']:after,

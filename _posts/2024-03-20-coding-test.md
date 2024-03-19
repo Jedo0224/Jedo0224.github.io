@@ -99,7 +99,7 @@ last_modified_at: 2024-03-20
 
 
 ### 나의 풀이
-```
+```python
 from collections import deque
 
 def solution(maps):

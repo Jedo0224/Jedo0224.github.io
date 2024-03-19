@@ -1,6 +1,6 @@
 ---
 title: "Coding-Test"
-permalink: categories/Coding-Test
+permalink: categories/coding-test
 layout: archive
 author_profile: true
 sidebar_main: true

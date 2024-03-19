@@ -98,4 +98,70 @@ last_modified_at: 2024-03-20
 <p>섬이 존재하지 않기 때문에 -1을 배열에 담아 반환합니다.</p>
 
 
+### 나의 풀이
+```
+from collections import deque
+
+def solution(maps):
+    # X : 바다
+    # 숫자 : 무인도 (상,하,좌,우) 하나의 무인도 
+    # 해당 섬에서 몇일 동안 머무를 수 있는지 return (오름차순)
+    
+    maps = [list(row) for row in maps]
+    
+    visited = []
+    for i in range(len(maps)):
+        temp = []
+        for w in range(len(maps[0])):
+            temp.append(False)
+        visited.append(temp)
+
+    def Bfs(x,y,count):
+
+        q = deque()
+        q.append([x,y])
+        visited[x][y] = True
+        
+        
+        while q : 
+            
+            x,y = q.popleft()
+            
+            dx = [-1,1,0,0]
+            dy = [0,0,-1,1]
+            
+            for move in range(4):
+                nx = x + dx[move]
+                ny = y + dy[move]        
+
+                if not (0 <= nx < len(maps) and 0<= ny < len(maps[0])):
+                    continue
+                
+
+                if maps[nx][ny] != "X" and visited[nx][ny] != True:
+                    visited[nx][ny] = True
+                    count += int(maps[nx][ny])
+                    q.append([nx,ny])
+                
+        
+        return count 
+    
+
+    
+    result = [] 
+    for i in range(len(maps)):
+        for w in range(len(maps[0])):
+            # print(maps[i][w])
+            if(maps[i][w] != "X" and visited[i][w] == False ):
+                result.append(Bfs(i,w,int(maps[i][w])))
+
+#     print(sorted(result, reverse = True))     
+   
+    if(len(result) == 0):
+        return [-1]
+    else : 
+        answer = sorted(result)
+    return answer
+```
+
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges

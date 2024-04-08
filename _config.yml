@@ -109,7 +109,7 @@ author:
   name             : "박재석/JEDO(제도)"
   avatar           : "/assets/images/profile1.png"
   bio              : "쟤도 하면 나도 할 수 있다."
-  location         : "가천대역 3번 출구"
+  # location         : "가천대역 3번 출구"
   # email            : "qkrwotjr0@naver.com"
   # links:
   #   - label: "qkrwotjr0@gmail.com"

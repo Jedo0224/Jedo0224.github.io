@@ -8,24 +8,33 @@
 
 .sidebar {
   @include clearfix();
-  // @include breakpoint(max-width $large) {
-  //   /* fix z-index order of follow links */
-  //   position: relative;
-  //   z-index: 10;
-  //   -webkit-transform: translate3d(0, 0, 0);
-  //   transform: translate3d(0, 0, 0);
-  // }
+
+  @include breakpoint(max-width $large) {
+    /* fix z-index order of follow links */
+    position: relative;
+    z-index: 10;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 
   @include breakpoint($large) {
     float: left;
-    width: calc(#{$right-sidebar-width-narrow} - 1em);
-    opacity: 0.75;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out;
+    width: calc(#{$left-sidebar-width-narrow} - 1em);
 
-    &:hover {
-      opacity: 1;
+    &.sticky {
+      overflow-y: auto;
+      top: 3.5em;
+      /* calculate height of nav list
+         viewport height - nav height - masthead x-padding
+      */
+      max-height: calc(100vh - #{$nav-height} - 2em);
     }
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(#{$left-sidebar-width} - 1em);
+
+  }
 
     &.sticky {
       overflow-y: auto;

@@ -8,35 +8,25 @@
 
 .sidebar {
   @include clearfix();
-
-  @include breakpoint(max-width $large) {
-    /* fix z-index order of follow links */
-    position: relative;
-    z-index: 10;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+  // @include breakpoint(max-width $large) {
+  //   /* fix z-index order of follow links */
+  //   position: relative;
+  //   z-index: 10;
+  //   -webkit-transform: translate3d(0, 0, 0);
+  //   transform: translate3d(0, 0, 0);
+  // }
 
   @include breakpoint($large) {
     float: left;
     width: calc(#{$left-sidebar-width-narrow} - 1em);
+    margin-left : 180px;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 
-
-  }
-
-  @include breakpoint($x-large) {
-    width: calc(#{$left-sidebar-width} - 1em);
-
-  }
-
-    &.sticky {
-      overflow-y: auto;
-      /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
-      */
-
+    &:hover {
+      opacity: 1;
     }
-  }
 
   @include breakpoint($x-large) {
     width: calc(#{$right-sidebar-width} - 1.0em);

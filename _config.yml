@@ -20,7 +20,7 @@ title                    : "JEDO의 개발일지"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "JEDO"
-description              : "의지를 가지고 꾸준히 한다면."
+description              : "제또기라서 제도."
 url                      : "https://jedo0224.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "박재석/JEDO(제도)"
-  avatar           : "/assets/images/profile.png"
+  avatar           : "/assets/images/profile1.png"
   bio              : "쟤도 하면 나도 할 수 있다."
   location         : "가천대역 3번 출구"
   # email            : "qkrwotjr0@naver.com"

@@ -5,7 +5,7 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
     <li>
-      ✨ <span>전체 글 수</span> <span>{{ sum }}</span> <span>개</span>
+       <span>전체 글 수</span> <span>{{ sum }}</span> <span>개</span>
     </li>
     <li>
       <span class="nav__sub-title">Backend</span>

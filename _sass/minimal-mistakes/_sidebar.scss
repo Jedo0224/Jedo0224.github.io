@@ -21,14 +21,7 @@
     float: left;
     width: calc(#{$left-sidebar-width-narrow} - 1em);
 
-    &.sticky {
-      overflow-y: auto;
-      top: 3.5em;
-      /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
-      */
-      max-height: calc(100vh - #{$nav-height} - 2em);
-    }
+
   }
 
   @include breakpoint($x-large) {
@@ -41,7 +34,7 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+
     }
   }
 

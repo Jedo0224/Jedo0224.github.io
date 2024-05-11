@@ -7,5 +7,5 @@ sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.jpa %}
+{% assign posts = site.categories.Jpa %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

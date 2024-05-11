@@ -15,6 +15,11 @@
             <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
           {% endif %}
         {% endfor %}
+        {% for category in site.categories %}
+                  {% if category[0] == "Jpa" %}
+                    <li><a href="/categories/{{ category[0] | downcase }}" class="">{{ category[0] }} ({{ category[1].size }})</a></li>
+                  {% endif %}
+                {% endfor %}
       </ul>
     </li>
     <li>

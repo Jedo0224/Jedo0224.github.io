@@ -14,17 +14,17 @@ date: 2024-09-24
 last_modified_at: 2024-09-19
 ---
 
-<img width="655" alt="%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-09-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2 06 24" src="https://github.com/user-attachments/assets/6aa68df2-e7e2-4a0d-ba01-e8371a2a4723">
-
-<br/>
-<br/>
 
 ## 삽입 코드 연결 과정
+<img width="655" alt="%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-09-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2 06 24" src="https://github.com/user-attachments/assets/6aa68df2-e7e2-4a0d-ba01-e8371a2a4723">
 1. newNode.next를 prev.next로 연결.
 2. prev.next를 newNode로 변경.
 3. nodeCount를 1 증가시킨다.
 - newNode 2 → 1 → 3으로 하면 안되는 걸까?
 	- 당연하게도 2를 먼저해버리면 이전에 [newNode.next](http://newNode.next) 변수에 prev.next를 저장할 수 없게된다.
+
+<br/>
+<br/>
 
 ## 삽입 코드 구현 시 주의 사항
 
@@ -34,11 +34,15 @@ last_modified_at: 2024-09-19
 
 	→ Head 조정이 필요없음
 
+<br/>
+
 (2) 삽입하려는 위치가 리스트의 맨 끝에 있을 경우.
 
 	→ Tail 조정이 필요하다.
 
 	→ pos == nodeCount + 1 인 경우 맨 앞에서부터 찾아갈 필요가 없음
+
+<br/>
 
 (3) 빈 리스트에 삽입하는 경우.
 
@@ -93,6 +97,8 @@ def insertAt(self, pos , newNode) :
 
 	→ Head 조정 필요
 
+<br/>
+
 (2) 리스트 맨 끝의 node를 삭제할 때
 
 	→ Tail 조정 필요
@@ -100,6 +106,8 @@ def insertAt(self, pos , newNode) :
 	→ pos == nodeCount인 경우도 삽입과 마찬가지로 리스트를 순회할 필요가 없을까?
 
 	→ 순회하지 않는 다면 prev를 알 방법이 없기 때문에 따로 순회 후 조정이 필요하다.
+
+<br/>
 
 (3) 유일한 노드를 삭제할 때
 
@@ -142,6 +150,9 @@ def popAt(self, pos):
  
 
 ---
+
+<br/>
+<br/>
 
 ## 리스트의 연결
 
